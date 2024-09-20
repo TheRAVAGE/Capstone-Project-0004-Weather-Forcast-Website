@@ -24,7 +24,6 @@ app.get("/location", async (req, res) => {
     }
     const location = req.query.location;
     const result = await axios.get(API_URL + location + "&aqi=yes", config);
-    // const resp = JSON.stringify(result.data);
     res.render("info.ejs", { content: result.data });
 });
 
