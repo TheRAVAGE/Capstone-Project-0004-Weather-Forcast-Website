@@ -76,7 +76,7 @@ body {
     width: 100%;
   }
   .contactBtn{
-    --bs-btn-color: #EEF5FF;
+    --bs-btn-color: #EEF5FF !important;
     --bs-btn-bg: #176B87;
     --bs-btn-border-color: #176B87;
     --bs-btn-hover-color: #176B87;
