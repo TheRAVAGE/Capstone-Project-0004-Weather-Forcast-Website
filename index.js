@@ -1,11 +1,14 @@
 import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
+import env from "dotenv";
 
 const app = express();
 const port = 10000;
 
 const API_URL = "http://api.weatherapi.com/v1/current.json?q=";
+env.config();
+const API_KEY = process.env.API_KEY;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -19,7 +22,7 @@ app.get("/contact", (req, res) => {
 });
 
 app.get("/location", async (req, res) => {
-  const API_KEY = req.query.key;
+  
   const config = {
     headers: { key: `${API_KEY}` },
   };
