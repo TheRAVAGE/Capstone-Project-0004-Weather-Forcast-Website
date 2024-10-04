@@ -3,7 +3,7 @@ import bodyParser from "body-parser";
 import axios from "axios";
 
 const app = express();
-const port = 3000;
+const port = 10000;
 const API_URL = "http://api.weatherapi.com/v1/current.json?q="
 
 app.use(express.static("public"));
