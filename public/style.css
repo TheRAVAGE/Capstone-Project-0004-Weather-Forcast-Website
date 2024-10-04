@@ -1,5 +1,7 @@
+
 body {
   background-color: #eef5ff;
+  min-width: 580px;
 }
 
 .navBar-btn-primary {
