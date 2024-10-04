@@ -1,72 +1,146 @@
 <%- include("partials/headerStat.ejs")%>
 <div class="container mt-5">
-    <div class="my-5 rounded-3" style="min-height: 70vh; background-color: #B4D4FF;">
-        <div class="containerGrid p-3 rounded-3" style="background-color: #176B87;">
+  <div
+    class="my-5 mx-5 rounded-3 displayBox"
+    style="min-height: 70vh; background-color: #b4d4ff; "
+  >
+    <div
+      class="containerGrid p-3 rounded-3"
+      style="background-color: #176b87; min-height: fit-content"
+    >
+      <div
+        class="locationDisplay01 paragraph flexBox rounded-3 p-2"
+        style="
+          border-right: 1px solid black;
+          text-align: left;
+          background-color: #b4d4ff;
+        "
+      >
+        <span style="font-size: 2rem"
+          ><%= content.location.name %>, <%= content.location.region %>, <%=
+          content.location.country %></span
+        >
+        <span style="font-size: 0.9rem"
+          >Latitude : <%= content.location.lat %>° N & Longitude : <%=
+          content.location.lon %>° E</span
+        >
+      </div>
 
-            <div class="locationDisplay01 paragraph flexBox rounded-3" style=" border-right: 1px solid black; text-align: left; background-color: #B4D4FF;">
-                <span style="font-size: 2rem;"><%= content.location.name %>, <%= content.location.region %>, <%= content.location.country %></span>
-                <span style="font-size: 0.90rem;">Latitude : <%= content.location.lat %>° N & Longitude : <%= content.location.lon %>° E</span>
-            </div>
+      <div
+        class="locationDisplay02 paragraph flexBox rounded-3 p-2"
+        style="background-color: #b4d4ff"
+      >
+        <span style="font-size: 2rem"><%= content.location.localtime %></span>
+        <span style="font-size: 0.9rem">Local Time : </span>
+      </div>
 
-            <div class="locationDisplay02 paragraph flexBox rounded-3" style="background-color: #B4D4FF;">
-                <span style="font-size: 2rem;"><%= content.location.localtime %></span>
-                <span style="font-size: 0.90rem;">Local Time : </span>
-            </div>
-
-            <div class="mainDisplay flexBox rounded-3 mb-0 p-2" style="background-color: #B4D4FF;">
-                <div class="mb-0" style="padding-bottom: 0px; margin-bottom: 0px;"><img src="<%= content.current.condition.icon %>" height="110rem" style="margin: 0px; border: 0px; padding: 0px;" alt="weather condition"></div><br>
-                <h2 class="paragraph mt-0" style="font-size: 1.25rem; font-weight: 700;"> <%= content.current.condition.text %></h2>
-                <h2 class="headingTitle mt-0" style="font-size: 3rem; font-weight: 700;"> <%= content.current.temp_c %>°C / <%= content.current.temp_f %>°F </h2>
-                <h2 class="paragraph"> Last Updated : <%= content.current.last_updated %></h2>
-                <p class="mt-2 mb-4 paragraph" style="font-weight: 400;">Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a></p>
-            </div>
-
-            <div class="paragraph rounded-3 p-2" style="background-color: #B4D4FF;">
-                <h2 class="mt-0" style="font-size: 1rem; font-weight: 500;"> Air Quality : </h2>
-                <ul style="font-size: 1rem; font-weight: 500;">
-                    <li>CO : <%= content.current.air_quality.co %></li>
-                    <li>NO<sub>2</sub> : <%= content.current.air_quality.no2 %></li>
-                    <li>O<sub>3</sub> : <%= content.current.air_quality.o3 %></li>
-                    <li>SO<sub>2</sub> : <%= content.current.air_quality.so2 %></li>
-                    <li>PM2.5 : <%= content.current.air_quality.pm2_5 %></li>
-                    <li>PM10 : <%= content.current.air_quality.pm10 %></li>
-                </ul>
-            </div>
-            <div class="paragraph rounded-3 p-2 justify-content" style="background-color: #B4D4FF;">
-                <h2 class="mt-0" style="font-size: 1rem; font-weight: 500;"> Wind : </h2>
-                <ul style="font-size: 1rem; font-weight: 500;">
-                    <li>Wind Speed : <%= content.current.wind_mph %>mph / <%= content.current.wind_kph %>kmph</li>
-                    <li>Wind Direction : <%= content.current.wind_degree %>°, towards <%= content.current.wind_dir %></li>
-                    <li>Wind Chill : <%= content.current.windchill_f %>°C / <%= content.current.windchill_f %>°F</li>
-                    <li>Cloud : <%= content.current.cloud %></li>                    
-                </ul>
-            </div>
-            <div class="paragraph rounded-3 p-2" style="background-color: #B4D4FF;">
-                <h2 class="mt-0" style="font-size: 1rem; font-weight: 500;"> Precipitation : </h2>
-                <ul style="font-size: 1rem; font-weight: 500;">
-                    <li>Precipitation : <%= content.current.precip_mm %>mm / <%= content.current.precip_in %>in</li>
-                    <li>Pressure : <%= content.current.pressure_mb %>mb / <%= content.current.pressure_in %>in</li>
-                    <li>Heat Index : <%= content.current.heatindex_c %>°C / <%= content.current.heatindex_f %>°F</li>
-                    <li>Humidity : <%= content.current.humidity %></li>                    
-                </ul>
-            </div>
-            <div class="paragraph rounded-3 p-2" style="background-color: #B4D4FF;">
-                <h2 class="mt-0" style="font-size: 1rem; font-weight: 500;"> Other Information : </h2>
-                <ul style="font-size: 1rem; font-weight: 500;">
-                    <li>Precipitation : <%= content.current.gust_mph %>mph / <%= content.current.gust_kph %>kmph</li>
-                    <li>Dewpoint : <%= content.current.dewpoint_c %>°C / <%= content.current.dewpoint_f %>°F</li>
-                    <li>Feels Like : <%= content.current.feelslike_c %>°C / <%= content.current.feelslike_f %>°F</li>
-                    <li>UV : <%= content.current.uv %></li>                    
-                </ul>
-            </div>
-                    
+      <div
+        class="mainDisplay flexBox rounded-3 mb-0 p-2"
+        style="background-color: #b4d4ff; min-height: fit-content"
+      >
+        <div class="mb-0" style="padding-bottom: 0px; margin-bottom: 0px">
+          <img
+            src="<%= content.current.condition.icon %>"
+            height="110rem"
+            style="margin: 0px; border: 0px; padding: 0px"
+            alt="weather condition"
+          />
         </div>
+        <br />
+        <h2 class="paragraph mt-0" style="font-size: 1.25rem; font-weight: 700">
+          <%= content.current.condition.text %>
+        </h2>
+        <h2 class="headingTitle mt-0" style="font-size: 3rem; font-weight: 700">
+          <%= content.current.temp_c %>°C / <%= content.current.temp_f %>°F
+        </h2>
+        <h2 class="paragraph">
+          Last Updated : <%= content.current.last_updated %>
+        </h2>
+        <p class="mt-2 mb-4 paragraph" style="font-weight: 400">
+          Powered by
+          <a href="https://www.weatherapi.com/" title="Free Weather API"
+            >WeatherAPI.com</a
+          >
+        </p>
+      </div>
+
+      <div class="paragraph rounded-3 p-2" style="background-color: #b4d4ff">
+        <h2 class="mt-0" style="font-size: 1rem; font-weight: 500">
+          Air Quality :
+        </h2>
+        <ul style="font-size: 1rem; font-weight: 500">
+          <li>CO : <%= content.current.air_quality.co %></li>
+          <li>NO<sub>2</sub> : <%= content.current.air_quality.no2 %></li>
+          <li>O<sub>3</sub> : <%= content.current.air_quality.o3 %></li>
+          <li>SO<sub>2</sub> : <%= content.current.air_quality.so2 %></li>
+          <li>PM2.5 : <%= content.current.air_quality.pm2_5 %></li>
+          <li>PM10 : <%= content.current.air_quality.pm10 %></li>
+        </ul>
+      </div>
+      <div
+        class="paragraph rounded-3 p-2 justify-content"
+        style="background-color: #b4d4ff"
+      >
+        <h2 class="mt-0" style="font-size: 1rem; font-weight: 500">Wind :</h2>
+        <ul style="font-size: 1rem; font-weight: 500">
+          <li>
+            Wind Speed : <%= content.current.wind_mph %>mph / <%=
+            content.current.wind_kph %>kmph
+          </li>
+          <li>
+            Wind Direction : <%= content.current.wind_degree %>°, towards <%=
+            content.current.wind_dir %>
+          </li>
+          <li>
+            Wind Chill : <%= content.current.windchill_f %>°C / <%=
+            content.current.windchill_f %>°F
+          </li>
+          <li>Cloud : <%= content.current.cloud %></li>
+        </ul>
+      </div>
+      <div class="paragraph rounded-3 p-2" style="background-color: #b4d4ff">
+        <h2 class="mt-0" style="font-size: 1rem; font-weight: 500">
+          Precipitation :
+        </h2>
+        <ul style="font-size: 1rem; font-weight: 500">
+          <li>
+            Precipitation : <%= content.current.precip_mm %>mm / <%=
+            content.current.precip_in %>in
+          </li>
+          <li>
+            Pressure : <%= content.current.pressure_mb %>mb / <%=
+            content.current.pressure_in %>in
+          </li>
+          <li>
+            Heat Index : <%= content.current.heatindex_c %>°C / <%=
+            content.current.heatindex_f %>°F
+          </li>
+          <li>Humidity : <%= content.current.humidity %></li>
+        </ul>
+      </div>
+      <div class="paragraph rounded-3 p-2" style="background-color: #b4d4ff">
+        <h2 class="mt-0" style="font-size: 1rem; font-weight: 500">
+          Other Information :
+        </h2>
+        <ul style="font-size: 1rem; font-weight: 500">
+          <li>
+            Precipitation : <%= content.current.gust_mph %>mph / <%=
+            content.current.gust_kph %>kmph
+          </li>
+          <li>
+            Dewpoint : <%= content.current.dewpoint_c %>°C / <%=
+            content.current.dewpoint_f %>°F
+          </li>
+          <li>
+            Feels Like : <%= content.current.feelslike_c %>°C / <%=
+            content.current.feelslike_f %>°F
+          </li>
+          <li>UV : <%= content.current.uv %></li>
+        </ul>
+      </div>
     </div>
+  </div>
 </div>
 
-
-<p>
-    <%# content.location.name %>
-    <%# content.current.temp_c %>
-</p>
+<p><%# content.location.name %> <%# content.current.temp_c %></p>
 <%- include("partials/footer.ejs")%>
