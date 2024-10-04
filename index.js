@@ -4,11 +4,8 @@ import axios from "axios";
 
 const app = express();
 const port = 10000;
-<<<<<<< HEAD
+
 const API_URL = "http://api.weatherapi.com/v1/current.json?q=";
-=======
-const API_URL = "http://api.weatherapi.com/v1/current.json?q="
->>>>>>> e3ea00b7312a51a4b474878fa044ca187201bfe3
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,9 +29,5 @@ app.get("/location", async (req, res) => {
 });
 
 app.listen(port, () => {
-<<<<<<< HEAD
   console.log(`Server Started on port ${port}`);
-=======
-    console.log(`Server Started on port ${port}`);
->>>>>>> e3ea00b7312a51a4b474878fa044ca187201bfe3
 });
