@@ -1,4 +1,4 @@
-This Weather Forcast Website is run through localhost:3000
+This Weather Forcast Website is run through localhost:10000
 ---------------------------------------------------------------------
 * clone the Repository
 * To run it go to the terminal
@@ -11,7 +11,7 @@ npm i
   
 node index.js
 
-* now you can go to localhost:3000 to run the website
+* now you can go to localhost:10000 to run the website
 ---------------------------------------------------------------------
 You Need an API Key to perform the lookup : so you can go to the website to be redirected to weatherAPI.com or click on the link below
 https://www.weatherapi.com/signup.aspx
