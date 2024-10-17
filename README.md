@@ -19,7 +19,10 @@ after signing up or logging in
 API key is found in the Dashboard
 
 after that create a .env file in the project location and open it using your text editor
+type in
+API_KEY = "PASTE YOUR API KEY HERE"
 
+---------------------------------------------------------------------
 
 The Website is made using
 -HTML
