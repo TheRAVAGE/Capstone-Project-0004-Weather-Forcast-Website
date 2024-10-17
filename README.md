@@ -20,7 +20,7 @@ API key is found in the Dashboard
 
 after that create a .env file in the project location and open it using your text editor
 type in <br>
-#### API_KEY = "PASTE YOUR API KEY HERE"
+API_KEY = "PASTE YOUR API KEY HERE"
 
 ---------------------------------------------------------------------
 
