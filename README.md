@@ -13,7 +13,7 @@ node index.js
 
 * now you can go to localhost:10000 to run the website
 ---------------------------------------------------------------------
-You Need an API Key to perform the lookup : so you can go to the website to be redirected to weatherAPI.com or click on the link below
+You Need an API Key to perform the lookup : so you can go to weatherAPI.com by clicking on the link below
 https://www.weatherapi.com/signup.aspx
 after signing up or logging in
 API key is found in the Dashboard
