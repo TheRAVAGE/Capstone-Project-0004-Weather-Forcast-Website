@@ -20,16 +20,18 @@ API key is found in the Dashboard
 
 after that create a .env file in the project location and open it using your text editor and type in <br>
 <br>
+```
 API_KEY = "PASTE YOUR API KEY HERE"
+```
 
 ---------------------------------------------------------------------
 
-The Website is made using
--HTML
--CSS
--JavaScript
--Node.JS
--Express.JS
--Embedded JavaScript
--API
--Axios
+The Website is made using<br>
+-HTML<br>
+-CSS<br>
+-JavaScript<br>
+-Node.JS<br>
+-Express.JS<br>
+-Embedded JavaScript<br>
+-API<br>
+-Axios<br>
